@@ -1,0 +1,26 @@
+1.下载activemq的相关包（去官网下载:http://activemq.apache.org/）
+	目前最新版本：5.11.1 开发包及源码下载地址：http://activemq.apache.org/activemq-5111-release.html
+	根据不同系统，来启动不懂的配置，我的是64位，所以我在这个目录下，
+		启动apache-activemq-5.11.1\bin\win64
+			activemq.bat这个文件
+	ActiveMQ 服务启动地址：
+		http://127.0.0.1:8161/admin/ 
+		用户名/密码 	admin/admin
+		
+2.第二步是进入页面之后有一行菜单栏
+	Home | Queues | Topics | Subscribers | Connections | Network | Scheduled | Send
+	如果是P2P 点对点    模式的话点击：Queues查看消息信息
+	如果是pub/sub 订阅/发布  模式的话点击：Topics  查看消息信息
+	
+点对点模式：
+	先有生产者，再有消费者，一对一的形式，也可以是多线程 整，变成多个生成者对应多个消费者  但都是一对一的 只不过是有多个而已
+	
+	eg：
+		com.lyt.queue.provider里面都是生产者的类
+		com.lyt.queue.cousumer里面都是消费者的类
+		
+		com.lyt.queue测试类，先运行生产者，在运行消费者
+		启动完activemq之后 在这个页面查看：http://127.0.0.1:8161/admin/queues.jsp
+		
+		参考动脑学院，视频地址：
+		https://pan.baidu.com/play/video#video/path=%2F%E8%85%BE%E8%AE%AF%E8%AF%BE%E5%A0%82%2F12.15%E9%AB%98%E5%B9%B6%E5%8F%91%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B9%8BactiveMQ-jack.wmv&t=-1
